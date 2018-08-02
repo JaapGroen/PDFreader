@@ -1,0 +1,59 @@
+{
+    "actions": {
+        "acqdatetime": {
+            "filters": {}, 
+            "params": {}
+        }, 
+        "header_series": {
+            "filters": {}, 
+            "params": {},
+            "tags":{}
+        }, 
+        "pdf_series": {
+            "filters": {}, 
+            "params": {},
+            "texts":[{
+                "name":"System Initialization",
+                "pre":"System Initialization:",
+                "post":"\r",
+                "type":"string"},{
+                "name":"Checking Sensors",
+                "pre":"Checking Sensors:",
+                "post":"\r",
+                "type":"string"},{
+                "name":"Timing Test",
+                "pre":"Timing Test:",
+                "post":"\r",
+                "type":"string"},{
+                "name":"Energy Test",
+                "pre":"Energy Test:",
+                "post":"\r",
+                "type":"string"},{
+                "name":"Uniformity Test",
+                "pre":"Uniformity Test: ",
+                "post":"\r",
+                "type":"string"},{
+                "name":"Timing Resolution",
+                "pre":"Timing Resolution:",
+                "post":"-ps",
+                "type":"float"},{
+                "name":"Bad pixel count",
+                "pre":"Bad pixel count:",
+                "post":", Bad pixel due",
+                "type":"float"
+                },{
+                "name":"Bad pixel timing",
+                "pre":"Bad pixel due to timing:",
+                "post":", Total",
+                "type":"float"
+                }
+            ]
+        }
+    }, 
+    "comments": {
+        "author": "Jaap Groen, OLVG", 
+        "description": "for Philips Vereos DailyQC", 
+        "params": {}, 
+        "version": "20180802"
+    }
+}
