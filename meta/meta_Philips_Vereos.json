@@ -1,0 +1,85 @@
+{
+    "comments": {
+        "author": "Jaap Groen, OLVG", 
+        "creator": "custom", 
+        "description": "meta.json for PDFreader for Philips Vereos DailyQC"
+    }, 
+    "results": {
+        "AcquisitionDateTime": {
+            "constraint_period": 2, 
+            "description": "date and time of acquisition", 
+            "display_level": 2, 
+            "display_name": "DateTime", 
+            "units": ""
+        },
+        "System Initialization": {
+            "constraint_equals": "PASSED", 
+            "description": "System Initialization", 
+            "display_level": 1, 
+            "display_name": "System Initialization", 
+            "units": ""
+        },
+        "Checking Sensors": {
+            "constraint_equals": "PASSED", 
+            "description": "Checking Sensors", 
+            "display_level": 1, 
+            "display_name": "Checking Sensors", 
+            "units": ""
+        },
+        "Timing Test": {
+            "constraint_equals": "PASSED", 
+            "description": "Timing Test", 
+            "display_level": 1, 
+            "display_name": "Timing Test", 
+            "units": ""
+        },
+        "Energy Test": {
+            "constraint_equals": "PASSED", 
+            "description": "Energy Test", 
+            "display_level": 1, 
+            "display_name": "Energy Test", 
+            "units": ""
+        },
+        "Uniformity Test": {
+            "constraint_equals": "PASSED", 
+            "description": "Uniformity Test", 
+            "display_level": 1, 
+            "display_name": "Uniformity Test", 
+            "units": ""
+        },
+        "Timing Resolution": {
+            "constraint_minlowhighmax": [
+                0.0,
+                0.0,
+                450,
+                525
+            ], 
+            "description": "Timing Resolution", 
+            "display_level": 1, 
+            "display_name": "Timing Resolution", 
+            "units": "ps"
+        },
+        "Bad pixel count": {
+            "constraint_minlowhighmax": [
+                0.0,
+                0.0,
+                160,
+                320
+            ], 
+            "description": "Bad pixel count", 
+            "display_level": 1, 
+            "display_name": "Bad pixel count", 
+            "units": "pixels"
+        },
+        "Bad pixel timing": {
+            "constraint_minlowhighmax": [
+                0.0,
+                0.0,
+                450,
+                525
+            ], 
+            "description": "Bad pixel timing", 
+            "display_level": 1, 
+            "display_name": "Bad pixel timing", 
+            "units": "pixels"
+        }
