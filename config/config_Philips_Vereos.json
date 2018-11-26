@@ -1,59 +1,66 @@
 {
     "actions": {
         "acqdatetime": {
-            "filters": {}, 
-            "params": {}
-        }, 
-        "header_series": {
-            "filters": {}, 
-            "params": {},
-            "tags":{}
+            "params": {}, 
+            "filters": {}
         }, 
         "pdf_series": {
+            "params": {}, 
             "filters": {}, 
-            "params": {},
-            "texts":[{
-                "name":"System Initialization",
-                "pre":"System Initialization:",
-                "post":"\r",
-                "type":"string"},{
-                "name":"Checking Sensors",
-                "pre":"Checking Sensors:",
-                "post":"\r",
-                "type":"string"},{
-                "name":"Timing Test",
-                "pre":"Timing Test:",
-                "post":"\r",
-                "type":"string"},{
-                "name":"Energy Test",
-                "pre":"Energy Test:",
-                "post":"\r",
-                "type":"string"},{
-                "name":"Uniformity Test",
-                "pre":"Uniformity Test: ",
-                "post":"\r",
-                "type":"string"},{
-                "name":"Timing Resolution",
-                "pre":"Timing Resolution:",
-                "post":"-ps",
-                "type":"float"},{
-                "name":"Bad pixel count",
-                "pre":"Bad pixel count:",
-                "post":", Bad pixel due",
-                "type":"float"
-                },{
-                "name":"Bad pixel timing",
-                "pre":"Bad pixel due to timing:",
-                "post":", Total",
-                "type":"float"
-                }
+            "texts": [
+                {
+                    "pre": "System Initialization:", 
+                    "type": "string", 
+                    "post": "\r", 
+                    "name": "System Initialization"
+                }, 
+                {
+                    "pre": "Checking Sensors:", 
+                    "type": "string", 
+                    "post": "\r", 
+                    "name": "Checking Sensors"
+                }, 
+                {
+                    "pre": "Timing Test:", 
+                    "type": "string", 
+                    "post": "\r", 
+                    "name": "Timing Test"
+                }, 
+                {
+                    "pre": "Energy Test:", 
+                    "type": "string", 
+                    "post": "\r", 
+                    "name": "Energy Test"
+                }, 
+                {
+                    "pre": "Timing Resolution:", 
+                    "type": "float", 
+                    "post": "-ps", 
+                    "name": "Timing Resolution"
+                }, 
+                {
+                    "pre": "Uniformity Test:", 
+                    "type": "string", 
+                    "post": "\r", 
+                    "name": "Uniformity Test"
+                }, 
+                {
+                    "pre": "Bad pixel count:", 
+                    "type": "float", 
+                    "post": ", Bad pixel due", 
+                    "name": "Bad Pixels"}
             ]
+        }, 
+        "header_series": {
+            "params": {}, 
+            "tags": {}, 
+            "filters": {}
         }
-    }, 
-    "comments": {
-        "author": "Jaap Groen, OLVG", 
-        "description": "for Philips Vereos DailyQC", 
+    }, "comments": {
         "params": {}, 
-        "version": "20180802"
-    }
+        "version": "20181126", 
+        "author": "Jaap Groen, OLVG", 
+        "description": "for Philips Vereos Daily QC report"
+    },
+    "cfgformat": "20180910"
 }
