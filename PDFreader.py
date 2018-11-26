@@ -20,9 +20,7 @@
 #
 #
 # Changelog:
-#   20180209: first complete version
-#
-# python CORanalyzer.py -r results.json -c config\config_GE.json -d images\study
+#   20180720: first complete version
 
 from __future__ import print_function
 
@@ -149,62 +147,46 @@ def PDF(data, results, action):
     
     
     stream=instance[dicom.tag.Tag('0042','0011')].value
+        
     stream=stream.decode("utf-8")
-    
+    # print(stream)
+   
     # finale check: a pdf file should start with '%PDF'
     if stream[0:4]=='%PDF':
         print("it's a PDF!")
     else:
         print('Not a pdf, quitting.')
         quit()
-        
-    # splitstream=stream.split('\r')
-    # lines=[]
-    # for part in splitstream:
-        # if part.startswith(")'("):
-            # lines.append(part[3:])
-            
-    # oneline='_newline_'.join(lines)
     
-    # # print(oneline)
- 
+    
+    # import string
+    # translator = str.maketrans('', '', string.punctuation)
+    
+    
     
     for key in action['texts']:
         pre_index=stream.find(key['pre'])
         if pre_index==-1:
             print(key['name'], ' - pre not found')
-        # else:
-            # print('pre @ ',pre_index)
        
         newstream=stream[pre_index:len(stream)]
         
         post_index=newstream.find(key['post'])
         if post_index==-1:
             print(key['name'], ' - post not found')
-        # else:
-            # print('post @ ',post_index)
  
-        if (pre_index==-1 or post_index==-1):
-            print('Could not locate ',key['name'])
-        else:
-            substream=stream[pre_index+len(key['pre']):post_index+pre_index]
+        substream=stream[pre_index+len(key['pre']):post_index+pre_index]
 
-            #remove all whites
-            substream = ''.join(substream.split())
-            # print(substream)
+        #remove all whites
+        substream = ''.join(substream.split())
+        # print(substream)
         
-            if key['type']=='string':
-                print('Saving ',key['name'], ' = ',str(substream)[:min(len(str(substream)),100)])
-                results.addString(key['name'], str(substream)[:min(len(str(substream)),100)]) 
-            elif key['type']=='float':
-                try:
-                    print('Saving ',key['name'], ' = ',float(substream))
-                    results.addFloat(key['name'], float(substream))
-                except:
-                    print('Saving ',key['name'], ' = ',str(substream)[:min(len(str(substream)),100)])
-                    results.addString(key['name'], str(substream)[:min(len(str(substream)),100)])
-            else:
-                print('Type of ',key['name'],' is unknown, not saving...')
+        if key['type']=='string':
+            results.addString(key['name'], str(substream)[:min(len(str(substream)),100)]) 
+        elif key['type']=='float':
+            results.addFloat(key['name'], float(substream))
+        else:
+            print('other type?')
         
         # print(key['name'],' = ',substream)
 
@@ -226,7 +208,7 @@ if __name__ == "__main__":
         elif name == 'header_series':
            header_series(data, results, action)
 
-        # run the COR analysis
+        # run the PDF analysis
         elif name == 'pdf_series':
             PDF(data, results, action)
 
