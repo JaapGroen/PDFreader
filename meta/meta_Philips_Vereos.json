@@ -1,85 +1,66 @@
 {
-    "comments": {
-        "author": "Jaap Groen, OLVG", 
-        "creator": "custom", 
-        "description": "meta.json for PDFreader for Philips Vereos DailyQC"
-    }, 
     "results": {
+        "Timing Resolution": {
+            "units": "ps", 
+            "constraint_minlowhighmax": [0, 0, 450, 525],
+            "display_name": "Timing Resolution", 
+            "description": "Timing resolution of the system", 
+            "display_level": 1
+        }, 
         "AcquisitionDateTime": {
-            "constraint_period": 2, 
-            "description": "date and time of acquisition", 
+            "constraint_period": 3, 
+            "units": "", 
             "display_level": 2, 
-            "display_name": "DateTime", 
-            "units": ""
-        },
+            "description": "date and time of acquisition", 
+            "display_name": "Date of acquisition"
+        }, 
         "System Initialization": {
-            "constraint_equals": "PASSED", 
-            "description": "System Initialization", 
+            "units": "", 
             "display_level": 1, 
             "display_name": "System Initialization", 
-            "units": ""
-        },
-        "Checking Sensors": {
-            "constraint_equals": "PASSED", 
-            "description": "Checking Sensors", 
-            "display_level": 1, 
-            "display_name": "Checking Sensors", 
-            "units": ""
-        },
-        "Timing Test": {
-            "constraint_equals": "PASSED", 
-            "description": "Timing Test", 
-            "display_level": 1, 
-            "display_name": "Timing Test", 
-            "units": ""
-        },
-        "Energy Test": {
-            "constraint_equals": "PASSED", 
-            "description": "Energy Test", 
-            "display_level": 1, 
-            "display_name": "Energy Test", 
-            "units": ""
-        },
+            "description": "System Initialization", 
+            "constraint_equals": "PASSED"
+        }, 
         "Uniformity Test": {
-            "constraint_equals": "PASSED", 
-            "description": "Uniformity Test", 
+            "units": "", 
             "display_level": 1, 
             "display_name": "Uniformity Test", 
-            "units": ""
-        },
-        "Timing Resolution": {
-            "constraint_minlowhighmax": [
-                0.0,
-                0.0,
-                450,
-                525
-            ], 
-            "description": "Timing Resolution", 
+            "description": "Uniformity Test", 
+            "constraint_equals": "PASSED"
+        }, 
+        "Energy Test": {
+            "units": "", 
             "display_level": 1, 
-            "display_name": "Timing Resolution", 
-            "units": "ps"
-        },
-        "Bad pixel count": {
-            "constraint_minlowhighmax": [
-                0.0,
-                0.0,
-                160,
-                320
-            ], 
-            "description": "Bad pixel count", 
+            "display_name": "Energy Test", 
+            "description": "Energy Test", 
+            "constraint_equals": "PASSED"
+        }, 
+        "Timing Test": {
+            "units": "", 
             "display_level": 1, 
-            "display_name": "Bad pixel count", 
-            "units": "pixels"
+            "display_name": "Timing Test", 
+            "description": "Timing Test", 
+            "constraint_equals": "PASSED"
         },
-        "Bad pixel timing": {
-            "constraint_minlowhighmax": [
-                0.0,
-                0.0,
-                450,
-                525
-            ], 
-            "description": "Bad pixel timing", 
+        "Checking Sensors": {
+            "units": "", 
             "display_level": 1, 
-            "display_name": "Bad pixel timing", 
-            "units": "pixels"
+            "display_name": "Checking Sensors", 
+            "description": "Checking Sensors", 
+            "constraint_equals": "PASSED"
+        }, 
+        "Bad Pixels": {
+            "units": "pixels", 
+            "display_level": 1, 
+            "display_name": "Number of bad pixels", 
+            "description": "Number of bad pixels", 
+            "constraint_minlowhighmax": [0, 0, 192, 320]
         }
+    }, 
+    "metaformat": "20180910", 
+    "comments": {
+        "description": "meta.json for PDFreader", 
+        "author": "Jaap Groen, OLVG", 
+        "creator": "custom"
+    }
+}
