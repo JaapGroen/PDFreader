@@ -68,7 +68,7 @@ def acqdatetime_series(data, results, action):
     ## 1. read only headers
     dcmInfile = dicom.read_file(data.series_filelist[0][0], stop_before_pixels=True)
 
-    dt = wadwrapper_lib.acqdatetime_series(dcmInfile)
+    dt = wadwrapper_lib.get_datetime(dcmInfile,"Content")
     
     results.addDateTime('AcquisitionDateTime', dt)
      
